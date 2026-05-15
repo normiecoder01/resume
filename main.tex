@@ -17,7 +17,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjusted margins for a full 1-page look without overlap
+% Precision Margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -29,16 +29,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Standardized Section formatting
+% Fixed Section formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Standardized commands to fix overlap issues
-\newcommand{\resumeItem}[1]{
-  \item\small{{#1 \vspace{-1pt}}}
-}
-
+% Standard Subheading command
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -47,13 +43,9 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[nosep]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
-
 \begin{document}
 
+%----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Anupal Anil Umale} \\ \vspace{1pt}
     \small +91 7028843375 $|$ \href{mailto:mailanupal@gmail.com}{\underline{mailanupal@gmail.com}} $|$ 
@@ -61,89 +53,90 @@
     \href{https://github.com/normiecoder01}{\underline{github.com/normiecoder01}}
 \end{center}
 
+%-----------SUMMARY-----------
 \section{Summary}
- \small{Impact-driven \textbf{Backend Engineer} specializing in \textbf{Golang} and \textbf{Distributed Systems}. Expert in architecting high-concurrency engines (1M+ records), event-driven systems (Kafka/SQS), and secure microservices[cite: 3]. Transitioning from .NET to build production-grade Go software with a focus on observability, memory optimization, and high-performance cloud deployments[cite: 4].}
+\small{Impact-driven \textbf{Backend Engineer} specializing in \textbf{Golang} and \textbf{Distributed Systems}. Expert in architecting high-concurrency engines (1M+ records), event-driven systems (Kafka/SQS), and secure microservices. Transitioning from .NET to build production-grade Go software with a focus on observability and performance.}
 
+%-----------SKILLS-----------
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}, nosep]
-    \small{\item{
-     \textbf{Languages}{: Go (Golang), SQL (PostgreSQL), TypeScript, C\# (.NET), JavaScript[cite: 6].} \\
-     \textbf{Backend/Infra}{: Microservices, gRPC, Kafka, Redis, Docker, Kubernetes, AWS (S3/SQS), Makefile.} \\
-     \textbf{Concepts}{: Concurrency (Goroutines/Channels), Worker Pools, Clean Architecture, Repository Pattern, DDD.} \\
-     \textbf{Tools}{: Zerolog, Prometheus, Git, pprof, Postman, Jira, OpenSearch.}
-    }}
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}, nosep]
+    \item \small{
+     \textbf{Languages}: Go (Golang), SQL (PostgreSQL), TypeScript, C\# (.NET), JavaScript. \\
+     \textbf{Backend/Infra}: Microservices, gRPC, Kafka, Redis, Docker, Kubernetes, AWS (S3/SQS), Makefile. \\
+     \textbf{Concepts}: Concurrency (Goroutines/Channels), Worker Pools, Clean Architecture, Repository Pattern, DDD. \\
+     \textbf{Tools}: Zerolog, Prometheus, Git, pprof, Postman, Jira, OpenSearch.
+    }
+\end{itemize}
 
+%-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\begin{itemize}[leftmargin=0.15in, label={}]
     \resumeSubheading
       {Mercedes-Benz (via TEKsystems \& NTT Data)}{Pune, MH}
       {Full Stack Developer}{Feb 2025 -- Present}
-      \resumeItemListStart
-        \resumeItem{\textbf{Awarded 'Mobility Maverick'} for end-to-end delivery of a production-grade Chatbot; managed lifecycle from \textbf{System Design} to \textbf{Cloud Deployment}[cite: 11, 14].}
-        \resumeItem{\textbf{Architected} a high-concurrency Go data engine using \textbf{Worker Pools} and \textbf{Goroutines} to optimize parallel file I/O for \textbf{1M+ records}[cite: 15].}
-        \resumeItem{Developed secure wrapper APIs with \textbf{OAuth 2.0/JWT} and \textbf{Redis} for sub-millisecond responses[cite: 16].}
-        \resumeItem{Optimized distributed architecture using the \textbf{Mediator Pattern} and \textbf{Clean Architecture}[cite: 17].}
-        \resumeItem{Integrated \textbf{structured logging (Zerolog)} and context-timeouts for production observability[cite: 17].}
-      \resumeItemListEnd
+      \begin{itemize}[nosep, leftmargin=1.5em]
+        \item \small{\textbf{Awarded 'Mobility Maverick'} for end-to-end delivery of a production-grade Chatbot.}
+        \item \small{\textbf{Architected} a high-concurrency Go data engine using \textbf{Worker Pools} and \textbf{Goroutines} for \textbf{1M+ records}.}
+        \item \small{Developed secure wrapper APIs with \textbf{OAuth 2.0/JWT} and \textbf{Redis} for sub-millisecond responses.}
+        \item \small{Optimized distributed architecture using the \textbf{Mediator Pattern} and \textbf{Clean Architecture}.}
+        \item \small{Integrated \textbf{structured logging (Zerolog)} and context-timeouts for production observability.}
+      \end{itemize}
 
     \resumeSubheading
       {Thinkbridge Software Pvt. Ltd}{Pune, MH}
       {Software Developer Trainee}{May 2024 -- Oct 2024}
-      \resumeItemListStart
-        \resumeItem{Built core business logic in \textbf{Go} using the \textbf{Repository Pattern} (90\%+ unit test coverage)[cite: 18, 20].}
-        \resumeItem{Optimized data flows between Angular and \textbf{Azure Cosmos DB} using DTOs and input validation[cite: 21].}
-        \resumeItem{Streamlined workflows by authoring \textbf{Makefiles} and managing \textbf{Docker} containerization[cite: 22].}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+      \begin{itemize}[nosep, leftmargin=1.5em]
+        \item \small{Built core business logic in \textbf{Go} using the \textbf{Repository Pattern} with high testability.}
+        \item \small{Optimized data flows between Angular and \textbf{Azure Cosmos DB} using DTOs.}
+        \item \small{Streamlined workflows by authoring \textbf{Makefiles} and managing \textbf{Docker} containerization.}
+      \end{itemize}
+\end{itemize}
 
+%-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \small\textbf{Concurrent Resource Orchestrator} $|$ \emph{Go, HTTP/TLS, Concurrency Primitives}
-      \end{tabular*}\vspace{-7pt}
-      \resumeItemListStart
-        \resumeItem{Engineered a concurrent engine using \textbf{Goroutines/WaitGroups} for parallel network-bound tasks[cite: 24].}
-        \resumeItem{Implemented a \textbf{Semaphore Pattern} via buffered channels to prevent OS socket exhaustion[cite: 25].}
-        \resumeItem{Utilized \textbf{Typed Channels} for thread-safe asynchronous reporting and error aggregation[cite: 26].}
-      \resumeItemListEnd
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item 
+    \textbf{\small Concurrent Resource Orchestrator} \hfill \small Go, HTTP/TLS \\
+    \begin{itemize}[nosep, leftmargin=1.5em]
+      \item \small{Engineered a concurrent engine using \textbf{Goroutines/WaitGroups} for parallel tasks.}
+      \item \small{Implemented a \textbf{Semaphore Pattern} via buffered channels to prevent OS socket exhaustion.}
+    \end{itemize}
+    
+    \vspace{2pt}
+    
+    \item 
+    \textbf{\small Event-Driven Commerce Engine} \hfill \small Go, Kafka, DDD \\
+    \begin{itemize}[nosep, leftmargin=1.5em]
+      \item \small{Architected a dual-interface API using \textbf{Watermill} and \textbf{SQS} to decouple services.}
+      \item \small{Implemented secure auth with \textbf{JWT Refresh Token rotation} and \textbf{DDD} principles.}
+    \end{itemize}
+\end{itemize}
 
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \small\textbf{MCP-Enabled Event-Driven Commerce Engine} $|$ \emph{Go, Watermill, SQS, Kafka, DDD}
-      \end{tabular*}\vspace{-7pt}
-      \resumeItemListStart
-        \resumeItem{Architected a dual-interface API using \textbf{Watermill} and \textbf{SQS} to decouple services[cite: 27].}
-        \resumeItem{Pioneered a custom \textbf{MCP server} allowing LLMs to interact with backend via \textbf{JSON-RPC}[cite: 28].}
-        \resumeItem{Implemented secure auth with \textbf{JWT Refresh Token rotation} following \textbf{DDD} principles[cite: 29].}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
+%-----------TECHNICAL STRENGTHS-----------
 \section{Technical Strengths}
- \begin{itemize}[leftmargin=0.15in, label={}, nosep]
-    \small{\item{
-     \textbf{System Design}: Proficient in Microservices, Event-Driven Architecture, and REST/gRPC API design.} \\
-     \textbf{Concurrency}: Deep understanding of Goroutine lifecycles, Mutexes, and Channel-based synchronization.} \\
-     \textbf{Reliability}: Focus on Graceful Shutdowns, Structured Logging, and Context-aware timeouts.
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}, nosep]
+    \item \small{\textbf{System Design}: Proficient in Microservices, Event-Driven Architecture, and API design.}
+    \item \small{\textbf{Concurrency}: Deep understanding of Goroutine lifecycles and synchronization.}
+    \item \small{\textbf{Reliability}: Focus on Graceful Shutdowns, Structured Logging, and Context-timeouts.}
+\end{itemize}
 
-\section{Achievements \& Leadership}
- \begin{itemize}[leftmargin=0.15in, label={}, nosep]
-    \small{\item{
-     \textbf{Technical Consultant}: Led digital transformation at \textbf{Rajmata Public School} (2020--2024)[cite: 32].} \\
-     \textbf{National E-Kart Racing}: Competed in \textbf{National E-Kart Championship} (2020) and Go-Karting (2017)[cite: 33].} \\
-     \textbf{Certifications}: Go (Golang) Masterclass (Udemy), PG-Diploma (CDAC ACTS)[cite: 33].
- \end{itemize}
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}, nosep]
+    \item \small{\textbf{Technical Consultant}: Automated academic workflows at Rajmata Public School (2020--2024).}
+    \item \small{\textbf{National E-Karting}: Competed in National E-Kart Championship (2020).}
+    \item \small{\textbf{Certifications}: Joseph Abah's Go Masterclass, PG-Diploma (CDAC ACTS).}
+\end{itemize}
 
+%-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
+\begin{itemize}[leftmargin=0.15in, label={}]
     \resumeSubheading
       {CDAC, ACTS}{Pune, MH}
       {PG-Diploma in Advanced Computing}{Feb 2024}
     \resumeSubheading
       {SGBAU}{Amravati, MH}
       {B.E. in Mechanical Engineering}{May 2020}
-  \resumeSubHeadingListEnd
+\end{itemize}
 
 \end{document}
